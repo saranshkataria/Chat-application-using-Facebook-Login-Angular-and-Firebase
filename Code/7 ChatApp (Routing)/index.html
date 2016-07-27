@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <base href="/">
+    <title>Base Template</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-route.min.js"></script>
+
+    <script type="text/javascript" src="JS/app.js"></script>
+    <script type="text/javascript" src="JS/controller.js"></script>
+  </head>
+  <body  ng-app="PureChat">
+  <div class="container" ng-init="show=true">
+     <form ng-if="show" ng-controller="SignInCtrl" class="form-signin">
+        <h2 class="form-signin-heading">{{text}} Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input ng-model="formData.mail" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input ng-model="formData.pass" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <a class="btn btn-lg btn-primary btn-block col-md-6" ng-href='/ jhgsfjhgsjhs' >Sign In</button>
+        <a class="btn btn-lg btn-primary btn-block col-md-6" ng-href="/signup">Sign Up</a>
+     </form>
+   
+    <ng-view></ng-view>
+    
+  </div>
+  </body>
+</html>
+
+
+
+
